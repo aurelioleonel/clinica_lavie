@@ -34,6 +34,8 @@ const pacientesController = {
         return res.status(404).json("Id não encontrado! ")
       }
 
+
+
       return res.status(200).json(paciente);
     } catch (error) {
       return res.status(500).json("Registro não encontrado, entre em contato com administrador da rede " + error)
@@ -46,6 +48,12 @@ const pacientesController = {
     try {
       //Deixe apenas campos nescessários 
       const { id_paciente, nome, email, idade, createdAt, updatedAt } = req.body;
+
+      const haEmail = await Pacientes.count({ where: { email } });
+      if (haEmail) {
+        return res.status(409).json("Este email já esta cadastrado em outro paciente!!!")
+      }
+
       const newPacientes = await Pacientes.create({
         id_paciente, nome, email, idade, createdAt, updatedAt
       });

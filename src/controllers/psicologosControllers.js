@@ -49,8 +49,17 @@ const psicologosController = {
       const { senha } = req.body;
       const newSenha = bcrypt.hashSync(senha, 10);
 
+
+
       //Deixe apenas campos nescessários 
       const { nome, email, apresentacao } = req.body;
+
+      const haEmail = await Psicologos.count({ where: { email } });
+      if (haEmail) {
+        return res.status(409).json("Este email já esta cadastrado em outro psicologo!!!")
+      }
+
+
       const newPsicologos = await Psicologos.create({
         nome, email, senha: newSenha, apresentacao
       });

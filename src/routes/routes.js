@@ -18,10 +18,10 @@ const PsicologoValidation = require("../validations/psicologos");
 const routes = express.Router();
 
 //Rotas da tabela atendimentos
-routes.get("/atendimentos", atendimentosControllers.listaDeAtendimentos);
-routes.get("/atendimentos/:id", atendimentosControllers.listarAtendimentoId);
+routes.get("/atendimentos", auth, atendimentosControllers.listaDeAtendimentos);
+routes.get("/atendimentos/:id", AtendimentoValidation.getOne, auth, atendimentosControllers.listarAtendimentoId);
 routes.post("/atendimentos", AtendimentoValidation.create, auth, atendimentosControllers.createAtendimentos);
-routes.put("/atendimentos/:id", atendimentosControllers.updateAtendimentos);
+routes.put("/atendimentos/:id", auth, atendimentosControllers.updateAtendimentos);
 routes.delete("/atendimentos/:id", atendimentosControllers.deleteAtendimentos);
 
 
