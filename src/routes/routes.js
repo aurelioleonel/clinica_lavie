@@ -20,7 +20,7 @@ const routes = express.Router();
 //Rotas da tabela atendimentos
 routes.get("/atendimentos", atendimentosControllers.listaDeAtendimentos);
 routes.get("/atendimentos/:id", atendimentosControllers.listarAtendimentoId);
-routes.post("/atendimentos", atendimentosControllers.createAtendimentos);
+routes.post("/atendimentos", AtendimentoValidation.create, auth, atendimentosControllers.createAtendimentos);
 routes.put("/atendimentos/:id", atendimentosControllers.updateAtendimentos);
 routes.delete("/atendimentos/:id", atendimentosControllers.deleteAtendimentos);
 
@@ -43,14 +43,14 @@ routes.post("/psicologos", psicologosControllers.createPsicologos);
 routes.put("/psicologos/:id", psicologosControllers.updatePsicologos);
 routes.delete("/psicologos/:id", psicologosControllers.deletePsicologos);
 
-//Rota para validação e autenticação do login
-routes.post("/login", loginValidation.login, AuthController.login);
-
 //Rotas para o dashboard
 routes.get("/dashboard/numero-pacientes", dashboardsController.numeroPacientes)
 routes.get("/dashboard/numero-psicologos", dashboardsController.numeroPsicologos)
 routes.get("/dashboard/numero-atendimentos", dashboardsController.numeroAtendimentos)
 routes.get("/dashboard/media-atendimentos-psicologos", dashboardsController.mediaAtendimentosPsicologos)
+
+//Rota para validação e autenticação do login
+routes.post("/login", loginValidation.login, AuthController.login);
 
 
 module.exports = routes;

@@ -36,10 +36,11 @@ const atendimentosController = {
   async createAtendimentos(req, res) {
 
     try {
+
       const { id: id_psicologo } = req.auth;
       const { id_paciente } = req.body;
 
-      const haPaciente = await Pacientes.count({ where: { id: id_paciente } });
+      const haPaciente = await Pacientes.count({ where: { id_paciente, } });
       if (!haPaciente)
         return res.status(400).json("Não existe o paciente com o id informado");
 

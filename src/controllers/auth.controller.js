@@ -24,17 +24,19 @@ const AuthController = {
 
       const token = jwt.sign(
         {
-          id: psicologo.id,
+          id: psicologo.id_psicologo,
           email: psicologo.email,
           nome: psicologo.nome,
           userType: "user",
         },
-        secret.key
+        secret.key,
+
       );
+
 
       return res.json(token);
     } catch (error) {
-      return res.status(500).json("Algo errado aconteceu, chame o batman!");
+      return res.status(500).json("Registro não encontrado, entre em contato com administrador da rede " + error)
     }
   },
 };

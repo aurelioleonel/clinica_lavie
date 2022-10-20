@@ -29,8 +29,9 @@ const dashboardsController = {
         try {
             const atendimentos = await Atendimentos.count();
             const psicologos = await Psicologos.count();
+            const media = (atendimentos / psicologos).toFixed(2);
 
-            return res.status(200).json(atendimentos / psicologos)
+            return res.status(200).json(media);
         } catch (err) {
             return res.status(500).json("Erro ao calcular a média dos atendimentos por psicólogos")
         }
