@@ -30,7 +30,7 @@ utilizado as ferramentas do Html, Css, javascript, nodejs e o VScode.
         <ul>
            <li>Total de pacientes</li>
            <li>Total de psicólogos</li>
-           <li>M´dia de atendimentos do psicólogo</li>
+           <li>Média de atendimentos do psicólogo</li>
         </ul>
     </ul>
     
