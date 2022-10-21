@@ -13,7 +13,7 @@ Em uma conversa com os Front-end e os PO foram decididos
 alguns grupos de endpoints que devem ser criad
 </p>
 
-<h2>O objetivo do projeto é atender a nescessidade da clínica
+<h3>O objetivo do projeto é atender a nescessidade da clínica
 Foi utilizado as ferramentas do Html, Css, javascript, nodejs e o VScode.
 <div>
   <h2>Eventos do projeto </h2>
@@ -39,8 +39,8 @@ Foi utilizado as ferramentas do Html, Css, javascript, nodejs e o VScode.
     </ul>
     
 </div>
-<p>Criadores do projeto: Marcos Aurélio, Marilene Correa
+<p>Criadores do projeto: Marcos Aurélio, Marilene Correa </p>
 <a>Documentação da API <a href="https://documenter.getpostman.com/view/23922555/2s84Diy5Rh"
  target="_blank">CLIQUE AQUI!</a>
-</h2>
+</h3>
 
