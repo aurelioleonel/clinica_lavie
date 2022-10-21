@@ -9,8 +9,8 @@ Em uma conversa com os Front-end e os PO foram decididos
 alguns grupos de endpoints que devem ser criad
 </p>
 
-<h4>O objetivo do projeto é atender a nescessidade da clínica
-Foi utilizado as ferramentas do Html, Css, javascript, nodejs e o VScode.
+<h4>O objetivo do projeto é atender a nescessidade da clínica,
+utilizado as ferramentas do Html, Css, javascript, nodejs e o VScode.
 <div>
   <h2>Eventos do projeto </h2>
     <ul>
