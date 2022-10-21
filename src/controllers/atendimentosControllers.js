@@ -65,7 +65,7 @@ const atendimentosController = {
     try {
       await Atendimentos.destroy({
         where: {
-          id_atendimento,
+          id_atendimento: id
         },
       });
       res.json(" Item deletado com sucesso!!")
@@ -80,14 +80,14 @@ const atendimentosController = {
   async updateAtendimentos(req, res) {
     const { id } = req.params;
     //Deixe apenas campos nescessários 
-    const { data_atendimento, observacao, id_psicologo, id_paciente, createdAt, updatedAt } = req.body;
+    const { data_atendimento, observacao, id_psicologo, id_paciente } = req.body;
     try {
       const atendimentosAtualizado = await Atendimentos.update({
-        data_atendimento, observacao, id_psicologo, id_paciente, createdAt, updatedAt
+        data_atendimento, observacao, id_psicologo, id_paciente, updatedAt: new Date()
       },
         {
           where: {
-            id_atendimento
+            id_atendimento: id
           },
         }
       );
