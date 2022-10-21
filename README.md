@@ -1,7 +1,3 @@
-# Documentação da API 
-https://documenter.getpostman.com/view/23922555/2s84Diy5Rh
-
-
 # Clínica La Vie - Saúde Mental
 <h2>Projeto Clínica La Vie, desafio da Gama Academy - xp45</h2>
 <p>
@@ -13,7 +9,7 @@ Em uma conversa com os Front-end e os PO foram decididos
 alguns grupos de endpoints que devem ser criad
 </p>
 
-<h3>O objetivo do projeto é atender a nescessidade da clínica
+<h4>O objetivo do projeto é atender a nescessidade da clínica
 Foi utilizado as ferramentas do Html, Css, javascript, nodejs e o VScode.
 <div>
   <h2>Eventos do projeto </h2>
@@ -42,5 +38,5 @@ Foi utilizado as ferramentas do Html, Css, javascript, nodejs e o VScode.
 <p>Criadores do projeto: Marcos Aurélio, Marilene Correa </p>
 <a>Documentação da API <a href="https://documenter.getpostman.com/view/23922555/2s84Diy5Rh"
  target="_blank">CLIQUE AQUI!</a>
-</h3>
+</h4>
 
